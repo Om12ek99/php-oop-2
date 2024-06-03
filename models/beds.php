@@ -9,7 +9,10 @@ class Beds extends Products{
         parent::__construct($name, $price, $type, $image);          //chirificazione degli attributi presi dal padre
         $this->size = $size;
     }
-
+    public function getSize()
+    {
+        return $this->size;
+    }
 }
 
 ?>
