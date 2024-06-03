@@ -16,10 +16,34 @@ class Products {
         $this->image    = $image;
         
     }
-    
+
     // inserimento della descriione del prodotto
     public function setDescription($description){
         $this->description = $description;
     }
+
+
+    // richiamo degli attributi e assegnazione degli attributi alle rispettive funzioni
+    public function getName(){
+        return $this->name;
+    }
+
+    public function getPrice(){
+        return $this->price;
+    }
+
+    public function getDescription(){
+        return $this->description;
+    }
+
+    public function getImage(){
+        return $this->image;
+    }
+
+    public function getType(){
+        return $this->type;
+    }
+
 }
+
 ?>
