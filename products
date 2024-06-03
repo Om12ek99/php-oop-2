@@ -1,0 +1,14 @@
+<?php
+
+//definizione della classe prodotti
+class Products {
+    protected string $name;
+    protected string $price;
+    protected string $description;
+    protected string $type;
+    protected string $image;
+
+    //definizione del construct padre
+    public function __construct(string $name, string $price, string $description, string $type,  string $image){}
+}
+?>
