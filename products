@@ -16,5 +16,10 @@ class Products {
         $this->image    = $image;
         
     }
+    
+    // inserimento della descriione del prodotto
+    public function setDescription($description){
+        $this->description = $description;
+    }
 }
 ?>
