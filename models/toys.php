@@ -9,13 +9,16 @@ class Toys extends Products{
 
     //definizione del construct figlio
     public function __construct(string $name, string $price, string $image, string $type,  string $animalAge, string $size){
-        parent::__construct($name, $price, $type, $image);
+        parent::__construct($name, $price, $type, $image);          //chirificazione degli attributi presi dal padre
         $this->animalAge = $animalAge;
         $this->size=$size;
     }
         // conversione in valori visibili ed accessibili
         public function getAnimalAge(){
             return $this->animalAge;
+        }
+        public function getSize(){
+            return $this->size;
         }
 }
 ?>
