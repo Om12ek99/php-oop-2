@@ -20,7 +20,12 @@ class Food extends Products {
          $this->canned = $canned;
      }
 
-     
+     public function getfoodName(){
+        return $this->foodName;
+     }
+     public function getmainIngredient(){
+        return $this->mainIngredient;
+     }
 }
 
 ?>
