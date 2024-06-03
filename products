@@ -9,6 +9,12 @@ class Products {
     protected string $image;
 
     //definizione del construct padre
-    public function __construct(string $name, string $price, string $description, string $type,  string $image){}
+    public function __construct(string $name, string $price, string $type, string $image){
+        $this->name     = $name;
+        $this->price    = $price;
+        $this->type     = $type;
+        $this->image    = $image;
+        
+    }
 }
 ?>
