@@ -10,6 +10,8 @@ class Toys extends Products{
     //definizione del construct figlio
     public function __construct(string $name, string $price, string $image, string $type,  string $animalage, string $size){
         parent::__construct($name, $price, $type, $image);
+        $this->animalage = $animalage;
+        $this->size=$size;
     }
 }
 ?>
