@@ -1,31 +1,31 @@
 <?php
-
-require_once __DIR__ . "/products.php";
-
 class Food extends Products {
-    private bool $canned;
-    private string $foodName;
-    private string $mainIngredient;
+    private int $weight_gr;
+    private string $food_status;
 
-    public function __construct(string $name, string $price, string $type, string $image, string $canned, string $foodName, string $mainIngredient){
-        parent::__construct($name, $price, $type, $image); 
+    public function __construct(string $_name, string $_price, Type $_type, int $_weight_gr) {
+        parent::__construct($_name, $_price, $_type);
+        $this->weight_gr = $_weight_gr;
+    }
 
-        $this->foodName = $foodName;
-        $this->mainIngredient = $mainIngredient;
-     }
+    /**
+     * Get the value of food_status
+     */ 
+    public function getfood_status(): string
+    {
+        return $this->food_status;
+    }
 
-     //inserimento del booleano
-     public function setCanned($canned)
-     {
-         $this->canned = $canned;
-     }
-
-     public function getfoodName(){
-        return $this->foodName;
-     }
-     public function getmainIngredient(){
-        return $this->mainIngredient;
-     }
+    /**
+     * Set the value of food_status
+     *
+     */ 
+    public function setfood_status($_food_status): void
+    {
+        if ($_food_status === "") {
+            throw new Exception("Non può essere vuoto");
+            
+        }
+        $this->food_status = $_food_status;
+    }
 }
-
-?>
